@@ -13,7 +13,7 @@
         "src/voting_dapp_frontend/dist"
       ],
       "type": "assets",
-      "workspace": "voting_dapp_frontend"
+      "build": "cd src/voting_dapp_frontend && npm install && npm run build"
     }
   },
   "defaults": {

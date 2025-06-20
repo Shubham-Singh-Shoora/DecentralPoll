@@ -1,3 +1,14 @@
+type Poll = record {
+    id : nat64;
+    question : text;
+    options : vec text;
+    votes : vec nat64;
+    voters : vec record { text; nat64 }
+};
+
 service : {
-    "greet": (text) -> (text) query;
+    "create_poll" : (text, vec text) -> (nat64);
+    "get_poll" : (nat64) -> (opt Poll) query;
+    "get_polls" : () -> (vec Poll) query;
+    "vote" : (nat64, nat64) -> (variant { Ok; Err : text })
 }
