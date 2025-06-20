@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "voting_dapp_backend": {
+      "candid": "src/voting_dapp_backend/voting_dapp_backend.did",
+      "package": "voting_dapp_backend",
+      "type": "rust"
+    },
+    "voting_dapp_frontend": {
+      "dependencies": [
+        "voting_dapp_backend"
+      ],
+      "source": [
+        "src/voting_dapp_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "voting_dapp_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
